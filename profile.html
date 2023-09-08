@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb2f9d3842.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!------------nav bar------------>
+    <nav class="navbar">
+        <!-----logo image----->
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="images/logo.png"></a>
+            <div class="search-box"><!-----search box near logo------>
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <!------menu in center------>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="images/home.png"><span>Home</span></a></li>
+                <!--active-link is used since home must have underline-->
+                <li><a href="#"><img src="images/network.png"><span>My Network</span></a></li>
+                <li><a href="#"><img src="images/jobs.png"><span>Jobs</span></a></li>
+                <li><a href="#"><img src="images/message.png"><span>Messaging</span></a></li>
+                <li><a href="#"><img src="images/notification.png"><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <!-----user profile------->
+        <div class="navbar-right">
+            <div class="online"><!------to make user is online with green dot----->
+                <!-------js is used here to show/hide user profile-->
+                <img src="images/@.jpg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+
+        </div>
+        <!------profile drop down menu---------->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/@.jpg">
+                    <div>
+                        <h3>Yatendra Singh</h3>
+
+                        <br> <a href="profile.html">See your profile</a> <br>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!------end of nav bar------>
+    <div class="container">
+        <!-----main profile section------>
+        <div class="profile-main">
+            <!------profile container-------->
+            <div class="profile-container">
+                <img src="images/back.jpeg" width="100%">
+                <div class="profile-container-inner">
+                    <img src="images/@.jpg" class="profile-pic">
+                    <h1> Yatendra Singh Kushwah </h1>
+                    <b>Front end developer intern at codeclause | Front end developer | React.js | JavaScript | CSS 3 |
+                        HTML 5 | SQL </b>
+                    <p>Greater Delhi Area &middot; <a href="#">Contact info</a></p>
+                    <div class="mutual-connection">
+                        <img src="images/vishal.jpeg">
+                        <img src="images/tushar.jpeg">
+                        <span> 4 mutual connection : Park Morgan</span>
+                    </div>
+                    <div class="profile-btn">
+                        <a href="#" class="primary-btn"><img src="images/connect.png">Connect</a>
+                        <a href="#"><img src="images/chat.png">Message</a>
+                    </div>
+                </div>
+            </div>
+            <!------end of profile container-------->
+            <div class="profile-description">
+                <h2>About</h2>
+                <p>Web Developer , I have strong hold on Frontend Development. I am an individual who strives for
+                    knowledge and aims to be an asset to self-growth and the organisation. Currently enrolled in a
+                    Bachelor of Technology - B.Tech degree focused in Electronics and Communication Engineering from
+                    Guru Teg Bahadur Institute of Technology (affiliated to the GGS Indraprastha University, New Delhi)
+                </p>
+                <br><a href="#" class="see-more-link">See more...</a> <br>
+            </div>
+            <!-----experience------>
+            <div class="profile-description">
+                <h2>Experiences</h2>
+                <div class="profile-desc-row">
+                    <img src="images/letsgrowmore.jpeg">
+                    <div>
+                        <h3>Front Web Developer</h3>
+                        <b>Slack &middot; Full-time</b>
+                        <b>Feb 2022 - Mar 2022 &middot; 1 month</b>
+                        <p>Skills: CSS · Project Management · Creative Problem Solving · SQL · Application Programming Interfaces (API) · Responsive Web Design · JavaScript · HTML
+                        </p>
+                    </div>
+                </div>
+                <div class="profile-desc-row">
+                    <img src="images/codeclause.jpeg">
+                    <div>
+                        <h3>Web Developer</h3>
+                        <b>CodeClause &middot; Internship</b>
+                        <b>Apr 2022 - May 2022 &middot; 1 month</b>
+                        <p>Skills: CSS · Project Management · Creative Problem Solving · SQL · Application Programming Interfaces (API) · Responsive Web Design · JavaScript · HTML
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="profile-desc-row">
+                    <img src="images/microsoft.png">
+                    <div>
+                        <h3>software developer</h3>
+                        <b>Microsoft &middot; Internship</b>
+                        <b>May 2022 - Oct 2022 &middot; 6 month</b>
+                        <p>I'm so grateful to Microsoft , Microsoft Learn, GitHub, NASSCOM, AICTE, Quess Corp Limited, EY for providing me with this great opportunity.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="profile-desc-row">
+                    <img src="images/google.png">
+                    <div>
+                        <h3>Software analyst</h3>
+                        <b>Google &middot; Full-time</b>
+                        <b>Oct 2022 - Oct 2023 &middot; 1 years</b>
+                        <p>Skills: AWS Lambda · Kubernetes · DevOps · Nexus · Sonar · Git · Linux · Jenkins · Docker Swarm · Docker Products · Amazon Web Services (AWS) · Java
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+                
+                <hr>
+                <a href="#" class="experience-link">Show all 5 experiences
+                    <img src="images/right-arrow.png" alt=""></a>
+            </div>
+            <!-----education------>
+            <div class="profile-description">
+                <h2>Education</h2>
+                <div class="profile-desc-row">
+                    <img src="images/IPU..png">
+                    <div>
+                        <h3>GURU GOBIND SINGH INDRAPRASTH UNIVERSITY</h3>
+                        <b>B-TECH , Electronics and Communication engineering</b>
+                        <b>Aug 2019 - july 2023</b>
+                        <hr>
+                    </div>
+                </div>
+                <div class="profile-desc-row">
+                    <img src="images/SCHOOL.avif">
+                    <div>
+                        <h3>Govt. sn. sec. school </h3>
+                        <b>Higher secondary, PCM </b>
+                        <b>july 2016 - March 2017</b>
+                    </div>
+                </div>
+            </div>
+            <!-----skills------>
+            <div class="profile-description">
+                <h2>Skills</h2>
+                <a href="#" class="skills-btn">HTML</a>
+                <a href="#" class="skills-btn">CSS</a>
+                <a href="#" class="skills-btn">Javascript</a>
+                <a href="#" class="skills-btn">Front end developement</a>
+                <a href="#" class="skills-btn">Bootstrap</a>
+                <a href="#" class="skills-btn">SQL</a>
+                <a href="#" class="skills-btn">Java</a>
+                <a href="#" class="skills-btn"> Web Development</a>
+                <a href="#" class="skills-btn"> Leadership  </a>
+                <a href="#" class="skills-btn">Communication</a>
+                <a href="#" class="skills-btn">Teamwork</a>
+                <a href="#" class="skills-btn">UI/UX Design</a>
+                <a href="#" class="skills-btn">Coding</a>
+            </div>
+            <!-----languages------>
+            <div class="profile-description">
+                <h2>Languages</h2>
+                <a href="#" class="language-btn">English</a>
+                <a href="#" class="language-btn">Hindi</a>
+            </div>
+        </div>
+        <!-----sidebar profile section------>
+        <div class="profile-sidebar">
+            <div class="sidebar-ad">
+                <small>Ad</small>
+                <p>Master the principles of strategy specialist</p>
+                <div>
+                    <img src="images/@.jpg">
+                    <img src="images/mi-logo.png">
+                </div>
+                <b>Brand and demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn more</a>
+            </div>
+            <div class="sidebar-people">
+                <h3>People you may know</h3>
+                <div class="sidebar-people-row">
+                    <img src="images/vishal.jpeg">
+                    <div>
+                        <h2>Vishal Kumar</h2>
+                        <p> Frontend developer at cantic Technologies</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+                <div class="sidebar-people-row">
+                    <img src="images/hasnain.jpeg">
+                    <div>
+                        <h2>Syed Taqi Hasnain Naqvi</h2>
+                        <p>ABAP Developer at Denpro Technology </p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+                <div class="sidebar-people-row">
+                    <img src="images/tushar.jpeg">
+                    <div>
+                        <h2>Tushar pulani</h2>
+                        <p> Web Developer Intern at codeclause</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+                <div class="sidebar-people-row">
+                    <img src="images/vanshika.jpeg">
+                    <div>
+                        <h2>Vanshika Gupta</h2>
+                        <p> Backend Developer at Ayasya Digital Solutions LLP </p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+                <div class="sidebar-people-row">
+                    <img src="images/lavy.jpeg">
+                    <div>
+                        <h2>Lavy Roy</h2>
+                        <p>Student at Gauhati university..</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------footer------->
+    <div class="profile-footer">
+        <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertising</a>
+            <a href="#">Get the App</a>
+            <a href="#">More</a>
+
+            <div class="copyright-msg">
+                <img src="images/logo.png">
+                <p>Linkedin &copy; 2023. All right reserved</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

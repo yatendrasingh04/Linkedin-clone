@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb2f9d3842.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!------------nav bar------------>
+    <nav class="navbar">
+        <!-----logo image----->
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="images/logo.png"></a>
+            <div class="search-box"><!-----search box near logo------>
+                <img src="images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <!------menu in center------>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active-link"><img src="images/home.png"><span>Home</span></a></li>
+                <!--active-link is used since home must have underline-->
+                <li><a href="#"><img src="images/network.png"><span>My Network</span></a></li>
+                <li><a href="#"><img src="images/jobs.png"><span>Jobs</span></a></li>
+                <li><a href="#"><img src="images/message.png"><span>Messaging</span></a></li>
+                <li><a href="#"><img src="images/notification.png"><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <!-----user profile------->
+        <div class="navbar-right">
+            <div class="online"><!------to make user is online with green dot----->
+                <!-------js is used here to show/hide user profile-->
+                <img src="images/@.jpg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+
+        </div>
+        <!------profile drop down menu---------->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/@.jpg">
+                    <div>
+                        <h3>Yatendra Singh</h3>
+                       <br> <a href="profile.html">See your profile</a><br>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!----------left,right,main side bar-------->
+    <div class="container">
+        <!----------left side bar-------->
+        <div class="left-sidebar">
+            <!-----profile box------>
+            <div class="sidebar-profile-box">
+                <img src="images/back.jpeg" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="images/@.jpg">
+                    <h1>yatendra singh </h1>
+                    <h3>Front end developer intern at codeclause | Front end developer | React.js | JavaScript | CSS 3 | HTML 5 | SQL ||</h3>
+                    <ul>
+                        <li>Your Profile Views <span>1000+</span></li>
+                        <li>Your Post Views <span>50+</span></li>
+                        <li>Your Connections <span>500+</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link"> <!---profile link------>
+                    <a href="#"><img src="images/items.png" alt="">My items</a>
+                    <a href="#"><img src="images/premium.png" alt="">Try Premium</a>
+                </div>
+            </div>
+            <!-----profile box end------>
+            <!-----sidebar activity------>
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3>Recent</h3>
+                <a href="#"><img src="images/recent.png">Web Development</a>
+                <a href="#"><img src="images/recent.png">UX/UI</a>
+                <a href="#"><img src="images/recent.png">Developer</a>
+                <a href="#"><img src="images/recent.png">Strategy Development</a>
+                <a href="#"><img src="images/recent.png">Better Coder</a>
+                <a href="#"><img src="images/recent.png">Online Learning</a>
+                <h3>Groups</h3>
+                <a href="#"><img src="images/group.png">Web Dev Group</a>
+                <a href="#"><img src="images/group.png">Managers Group</a>
+                <a href="#"><img src="images/group.png">Chief Officers group</a>
+                <a href="#"><img src="images/group.png">Tech R&D group</a>
+                <h3>Hashtag</h3>
+                <a href="#"><img src="images/hashtag.png">webdev</a>
+                <a href="#"><img src="images/hashtag.png">challengers</a>
+                <a href="#"><img src="images/hashtag.png">onlinelearning</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+            <!-------js is used here to show more/less the above content-->
+            <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b> </p>
+            <!-----end of sidebar activity------>
+        </div>
+        <!----------end of left side bar-------->
+        <!----------,main side bar-------->
+        <div class="main-content">
+            <!------create post section------>
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="images/@.jpg">
+                    <textarea rows="2" placeholder="Write a Post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="images/photo.png">Photo</li>
+                    <li><img src="images/video.png">Video</li>
+                    <li><img src="images/event.png">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+            <!------end of create post section------>
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <img src="images/down-arrow.png"></span></p>
+            </div>
+            <!-----post section------>
+            <div class="post">
+                <div class="post-author"><!--author of post-->
+                    <img src="images/vishal.jpeg">
+                    <div>
+                        <h1>Vishal Kumar</h1>
+                        <small>Frontend developer at cantic Technologies</small>
+                        <small>1 hours ago</small>
+                    </div>
+                </div>
+                <!--post content-->
+                <p>Hey Connections!
+                    I am happy to share that I have completed my 3 months journey with GirlScript Winter of Contributing as a Contributor in three different domains. I am one of the top contributors from my domain.
+                    
+                    <br>I have learned a lot throughout this program and will continue to contribute to the Open Source community. I would like to thank all the mentors and the whole team of GirlScript Winter of Contributing Foundation for their guidance and support throughout the program.<br>
+                    
+                   <br> #opensource #GWOC21 #opensourcecommunit<br>
+                </p>
+                <!--post image-->
+                <img src="images/v.certificate.jpeg" width="100%">
+                <!--status of post like comments, likes-->
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">vishal and 105 others</span>
+                    </div>
+                    <div>
+                        <span>50 comments &middot; 88 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/@.jpg" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!---second post----->
+            <div class="post">
+                <div class="post-author"><!--author of post-->
+                    <img src="images/hasnain.jpeg">
+                    <div>
+                        <h1>Syed Taqi Hasnain Naqvi</h1>
+                        <small>ABAP Developer at Denpro Technology</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <!--post content-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia asperiores provident, quidem sint temporibus molestiae,
+                    hic et laboriosam nobis laudantium quia rerum eum eos,
+                    deserunt tempora reiciendis obcaecati. Illo, rerum?
+                </p>
+                <!--post image-->
+                <img src="images/post-image-2.png" width="100%">
+                <!--status of post like comments, likes-->
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">Syed Taqi and 80 others</span>
+                    </div>
+                    <div>
+                        <span>28 comments &middot; 92 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/@.jpg" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!----third post------>
+            <div class="post">
+                <div class="post-author"><!--author of post-->
+                    <img src="images/tushar.jpeg">
+                    <div>
+                        <h1>Tushar Pulani</h1>
+                        <small> Web Developer Intern at codeclause </small>
+                        <small>1 hours ago</small>
+                    </div>
+                </div>
+                <!--post content-->
+                <p>I'm happy to share that i got an opportunity to intern as a web developer with CodeClause .
+
+                    <br>🎯Looking forward to achieve my career goals, gaining experience and a lot more challenges.<br>
+                    
+                    I'm Thankful to CodeClause for providing me with this opportunity.
+                   <br>#Internship #CodeClause #WebDevelopment<br>
+                </p>
+                <!--post image-->
+                <img src="images/t.certificate.jpeg" width="100%">
+                <!--status of post like comments, likes-->
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">vishal and 95 others</span>
+                    </div>
+                    <div>
+                        <span>50 comments &middot; 45 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/@.jpg" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!----fourth post------>
+            <div class="post">
+                <div class="post-author"><!--author of post-->
+                    <img src="images/vanshika.jpeg">
+                    <div>
+                        <h1>Vanshika Gupta </h1>
+                        <small> Backend Developer at Ayasya Digital Solutions LLP</small>
+                        <small> 3 hours ago</small>
+                    </div>
+                </div>
+                <!--post content-->
+                <p> I am happy to share that I am starting a new position as software developer at Ayasya Digital Solutions
+                    <br> #AyasyaDigitalSolution, #Backeddeveloper           
+                </p>
+                <!--post image-->
+                <img src="images/vn.certificate.jpeg" width="100%">
+                <!--status of post like comments, likes-->
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">tushar and 120 others</span>
+                    </div>
+                    <div>
+                        <span>26 comments &middot; 30 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/@.jpg" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+            <!------ fift post ------->
+            <div class="post">
+                <div class="post-author"><!--author of post-->
+                    <img src="images/lavy.jpeg">
+                    <div>
+                        <h1>Lavy Roy</h1>
+                        <small> Student at Gauhati university.</small>
+                        <small> 3 hours ago</small>
+                    </div>
+                </div>
+                <!--post content-->
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fugit accusantium, laboriosam quisquam totam sunt nisi qui minima id nobis deleniti iste sed reiciendis modi eaque pariatur aut impedit eum ex. Nesciunt sapiente dolor voluptatem, aliquam nihil necessitatibus quis vero?        
+                </p>
+                <!--post image-->
+                <img src="images/post-image-4.png" width="100%">
+                <!--status of post like comments, likes-->
+                <div class="post-stats">
+                    <div>
+                        <img src="images/thumbsup.png">
+                        <img src="images/love.png">
+                        <img src="images/clap.png">
+                        <span class="liked-users">tushar and 66 others</span>
+                    </div>
+                    <div>
+                        <span>20 comments &middot; 35 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="images/@.jpg" class="post-activity-user-icon">
+                        <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/like.png">
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/comment.png">
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/share.png">
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="images/send.png">
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------right side bar-------->
+        <div class="right-sidebar">
+            <!---sidebar news section ------>
+            <div class="sidebar-news">
+                <img src="images/more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago&middot; 10,954 readers</span>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago&middot; 10,954 readers</span>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago&middot; 10,954 readers</span>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago&middot; 10,954 readers</span>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago&middot; 10,954 readers</span>
+
+                <a href="#" class="read-more-link">Read more</a>
+            </div>
+            <!---end of sidebar news section ------>
+            <!-------advertisement section------->
+            <div class="sidebar-ad">
+                <small>Ad</small>
+                <p>Master the principles of strategy specialist</p>
+                <div>
+                    <img src="images/@.jpg">
+                    <img src="images/mi-logo.png">
+                </div>
+                <b>Brand and demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn more</a>
+                
+            </div>
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="images/logo.png">
+                    <p>Linkedin &copy; 2023. All right reserved</p>
+                </div>
+            </div>
+        </div>
+        <!----------end of right side bar-------->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
